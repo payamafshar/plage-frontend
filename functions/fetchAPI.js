@@ -7,6 +7,7 @@ export const pitza = async () => {
   const data = response.json();
   return data;
 };
+const hello = 1;
 
 // export const sonnatiFood = async () => {
 //   const response = await fetch(

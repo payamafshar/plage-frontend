@@ -283,13 +283,13 @@ export default function Home({ pitza, cake }) {
   );
 }
 
-export async function getServerSideProps() {
-  const pitzaFood = await pitza();
-  // const cakeDesser = await cakeAndDesser();
-  return {
-    props: {
-      pitza: pitzaFood,
-      // cake: cakeDesser,
-    },
-  };
-}
+// export async function getServerSideProps() {
+//   // const pitzaFood = await pitza();
+//   // const cakeDesser = await cakeAndDesser();
+//   return {
+//     props: {
+//       pitza: pitzaFood,
+//       // cake: cakeDesser,
+//     },
+//   };
+// }
