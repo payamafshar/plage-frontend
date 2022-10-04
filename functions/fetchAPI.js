@@ -2,12 +2,11 @@ import axios from "axios";
 
 export const pitza = async () => {
   const response = await fetch(
-    "http://0.0.0.0:3000/category/6331e259ace335fd459eca71"
+    "http://plage-menew.runflare.run/category/633c1b17c887305ab2a44401"
   );
   const data = response.json();
   return data;
 };
-const hello = 1;
 
 // export const sonnatiFood = async () => {
 //   const response = await fetch(

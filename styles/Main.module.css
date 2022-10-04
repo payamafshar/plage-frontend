@@ -41,16 +41,17 @@
 }
 .text {
   position: absolute;
-  top: 38px;
+  top: 53px;
+  right: 152px;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.2rem;
   color: rgb(134, 125, 125);
 }
 .fake {
   display: flex;
   direction: rtl;
-  position: absolute;
+  /* position: absolute; */
   right: 154px;
 }
 @media (max-width: 768px) {

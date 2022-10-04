@@ -8,13 +8,26 @@ import { useEffect, useState } from "react";
 import { cakeAndDesser, pitza } from "../functions/fetchAPI";
 import { Link } from "react-scroll";
 import svg from "../components/assets/love.svg";
+import arrow from "../components/assets/arrow.svg";
 import plage from "../components/assets/1.jpg";
 import pizza from "../components/assets/peperoni.jpg";
-
+import * as Scroll from "react-scroll";
+import { scroller } from "react-scroll";
 export default function Home({ pitza, cake }) {
+  const scroll = Scroll.scroller;
+  const scrollTo = (id) => {
+    scroll.scrollTo(id, {
+      to: 1,
+      duration: 450,
+      delay: 100,
+      smooth: true,
+    });
+  };
   return (
     <>
-      <Navbar />
+      <div name={0}>
+        <Navbar />
+      </div>
       <div className={styles.container}>
         <div className={styles.fullScreen}>
           <div name={14} className={styles.main}>
@@ -45,9 +58,9 @@ export default function Home({ pitza, cake }) {
           </div>
           <div className={styles.viper}>
             <div className={styles.diver}>
-              {/* {pitza.category.product.map((item) => (
+              {pitza.category.product.map((item) => (
                 <Main key={item.id} data={item} />
-              ))} */}
+              ))}
             </div>
           </div>
         </div>
@@ -260,7 +273,11 @@ export default function Home({ pitza, cake }) {
             </div>
           </div>
         </div>
-        <span>Scroll top</span>
+        <div className={styles.svgUp} onClick={() => scrollTo(0)}>
+          <div className={styles.svgUpp}>
+            <Image src={arrow} width={60} height={60} />
+          </div>
+        </div>
         <div className={styles.footer}>
           <div className={styles.payam}>
             <span>Made With </span>
@@ -283,13 +300,13 @@ export default function Home({ pitza, cake }) {
   );
 }
 
-// export async function getServerSideProps() {
-//   // const pitzaFood = await pitza();
-//   // const cakeDesser = await cakeAndDesser();
-//   return {
-//     props: {
-//       pitza: pitzaFood,
-//       // cake: cakeDesser,
-//     },
-//   };
-// }
+export async function getServerSideProps() {
+  const pitzaFood = await pitza();
+  // const cakeDesser = await cakeAndDesser();
+  return {
+    props: {
+      pitza: pitzaFood,
+      // cake: cakeDesser,
+    },
+  };
+}

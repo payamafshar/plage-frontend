@@ -12,10 +12,7 @@ const Main = (props) => {
       <div>
         <h5 className={styles.title}>{title}</h5>
         <div className={styles.fake}>
-          <p className={styles.text}>
-            {text}
-            <br />
-          </p>
+          <p className={styles.text}>{text}</p>
         </div>
       </div>
 
