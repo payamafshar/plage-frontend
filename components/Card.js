@@ -24,6 +24,7 @@ const Card = (props) => {
       duration: 450,
       delay: 100,
       smooth: true,
+      offset: -300,
     });
 
     setFocus(!false);

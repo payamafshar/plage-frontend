@@ -10,6 +10,7 @@ import mocktail from "../components/assets/drink.png";
 import shake from "../components/assets/milk-shake.png";
 import cake from "../components/assets/cake.png";
 import smoty from "../components/assets/smoothie.png";
+import chochlate from "../components/assets/chochlate.png";
 import breakfast from "../components/assets/breakfast.png";
 import coffeeShop from "../components/assets/coffee-shop.png";
 import main from "../components/assets/dish.png";
@@ -56,7 +57,7 @@ const data = [
   {
     id: 6,
     title: "نوشیدنی پایه شکلات",
-    image: pizza,
+    image: chochlate,
   },
   {
     id: 7,

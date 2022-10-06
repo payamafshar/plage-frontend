@@ -30,6 +30,7 @@
   right: 16px;
 }
 
+
 .title {
   color: #f9f9f9;
   position: absolute;
@@ -70,8 +71,9 @@
   }
   .text {
     position: absolute;
-    top: 38px;
-    right: -13px;
+    top: 58px;
+    font-size: 14px;
+    right: 133px;
   }
 }
 

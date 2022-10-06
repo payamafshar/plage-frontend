@@ -25,11 +25,11 @@ export default function Home({ pitza, cake }) {
   };
   return (
     <>
-      <div name={0}>
+      <div className={styles.naver} name={0}>
         <Navbar />
       </div>
       <div className={styles.container}>
-        <div className={styles.fullScreen}>
+        <div className={styles.exx}>
           <div name={14} className={styles.main}>
             <div className={styles.line}>
               <h2>
