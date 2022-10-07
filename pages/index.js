@@ -5,7 +5,12 @@ import Navbar from "../components/Navbar";
 import styles from "../styles/Home.module.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { cakeAndDesser, pitza } from "../functions/fetchAPI";
+import {
+  americanStyle,
+  cakeAndDesser,
+  pasta,
+  pitza,
+} from "../functions/fetchAPI";
 import { Link } from "react-scroll";
 import svg from "../components/assets/love.svg";
 import arrow from "../components/assets/arrow.svg";
@@ -13,7 +18,7 @@ import plage from "../components/assets/1.jpg";
 import pizza from "../components/assets/peperoni.jpg";
 import * as Scroll from "react-scroll";
 import { scroller } from "react-scroll";
-export default function Home({ pitza, cake }) {
+export default function Home({ pitza, cake, pasta, burger }) {
   const scroll = Scroll.scroller;
   const scrollTo = (id) => {
     scroll.scrollTo(id, {
@@ -203,9 +208,9 @@ export default function Home({ pitza, cake }) {
           </div>
           <div className={styles.viper}>
             <div className={styles.diver}>
-              {/* {data.category.product.map((item) => (
+              {pasta.category.product.map((item) => (
                 <Main key={item.id} data={item} />
-              ))} */}
+              ))}
             </div>
           </div>
         </div>
@@ -235,9 +240,9 @@ export default function Home({ pitza, cake }) {
           </div>
           <div className={styles.viper}>
             <div className={styles.diver}>
-              {/* {data.category.product.map((item) => (
+              {burger.category.product.map((item) => (
                 <Main key={item.id} data={item} />
-              ))} */}
+              ))}
             </div>
           </div>
         </div>
@@ -303,9 +308,13 @@ export default function Home({ pitza, cake }) {
 export async function getServerSideProps() {
   const pitzaFood = await pitza();
   // const cakeDesser = await cakeAndDesser();
+  const pastaFood = await pasta();
+  const burger = await americanStyle();
   return {
     props: {
       pitza: pitzaFood,
+      pasta: pastaFood,
+      burger,
       // cake: cakeDesser,
     },
   };

@@ -64,20 +64,20 @@ export const pitza = async () => {
 //   const data = response.json();
 //   return data;
 // };
-// export const pasta = async () => {
-//   const response = await fetch(
-//     "http://localhost:5000/category/63340bc459f20747bf69080f"
-//   );
-//   const data = response.json();
-//   return data;
-// };
-// export const americanStyle = async () => {
-//   const response = await fetch(
-//     "http://localhost:5000/category/63340bd059f20747bf690811"
-//   );
-//   const data = response.json();
-//   return data;
-// };
+export const pasta = async () => {
+  const response = await fetch(
+    "http://plage-menew.runflare.run/category/63401ed19856441a217abbe6"
+  );
+  const data = response.json();
+  return data;
+};
+export const americanStyle = async () => {
+  const response = await fetch(
+    "http://plage-menew.runflare.run/category/63402b269856441a217abc13"
+  );
+  const data = response.json();
+  return data;
+};
 // export const pishGhaza = async () => {
 //   const response = await fetch(
 //     "http://localhost:5000/category/63340bdb59f20747bf690813"
