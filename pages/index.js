@@ -3,6 +3,9 @@ import Image from "next/image";
 import Main from "../components/Main";
 import Navbar from "../components/Navbar";
 import styles from "../styles/Home.module.css";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import {
@@ -18,7 +21,13 @@ import plage from "../components/assets/1.jpg";
 import pizza from "../components/assets/peperoni.jpg";
 import * as Scroll from "react-scroll";
 import { scroller } from "react-scroll";
+import Example from "../components/Modalb";
 export default function Home({ pitza, cake, pasta, burger }) {
+  const [drawer, setDrawert] = useState(false);
+
+  const clickHandler = () => {
+    setDrawert(!drawer);
+  };
   const scroll = Scroll.scroller;
   const scrollTo = (id) => {
     scroll.scrollTo(id, {
@@ -64,7 +73,7 @@ export default function Home({ pitza, cake, pasta, burger }) {
           <div className={styles.viper}>
             <div className={styles.diver}>
               {pitza.category.product.map((item) => (
-                <Main key={item.id} data={item} />
+                <Main key={item.id} bool={drawer} data={item} />
               ))}
             </div>
           </div>
@@ -293,9 +302,7 @@ export default function Home({ pitza, cake, pasta, burger }) {
             </div>
             <span>By</span>
             <div className={styles.name}>
-              <Link href="https://www.lioncomputer.com/" passHref>
-                Payam Afshari
-              </Link>
+              <a href="https://www.lioncomputer.com/">Payam Afshari</a>
             </div>
           </div>
         </div>

@@ -45,6 +45,7 @@
   display: grid;
   grid-template-columns: repeat(15, 1fr);
   width: 100%;
+  cursor: pointer;
 }
 
 .category {
@@ -93,6 +94,10 @@
 }
 .text p {
   margin-bottom: 30px;
+}
+.h4 {
+  font-size: 20px;
+  margin-top: 4px;
 }
 
 .matn {

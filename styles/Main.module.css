@@ -30,11 +30,10 @@
   right: 16px;
 }
 
-
 .title {
   color: #f9f9f9;
   position: absolute;
-  top: -9px;
+  top: 6px;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.8rem;
@@ -47,7 +46,51 @@
   font-weight: 600;
   font-size: 12px;
   line-height: 1.2rem;
-  color: rgb(134, 125, 125);
+  color: rgb(180, 180, 180);
+}
+
+.modality {
+  background-color: black;
+  direction: rtl;
+  align-items: center;
+}
+.mohtaviat {
+  font-size: 12px;
+  color: #d1aa4b;
+}
+.pe {
+  color: #f9f9f9;
+  font-size: 14px;
+  font-weight: 500;
+}
+.se {
+  color: #f9f9f9;
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 14px;
+}
+
+.rost {
+  margin-top: 10px;
+}
+.hezar {
+  color: #d1aa4b;
+  font-size: 12px;
+  margin-right: 4px;
+}
+.titleEdit {
+  color: #d1aa4b;
+  text-align: center;
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+.modalImage {
+  border-radius: 5px;
+}
+.flexer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
 }
 .fake {
   display: flex;
@@ -68,6 +111,7 @@
   .title {
     position: absolute;
     right: 140px;
+    top: 20px;
   }
   .text {
     position: absolute;

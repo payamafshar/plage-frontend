@@ -152,6 +152,10 @@
 .exx {
   margin-top: 300px;
 }
+.name a {
+  text-decoration: none;
+  color: #00050e;
+}
 
 @media (max-width: 768px) {
   .diver {
