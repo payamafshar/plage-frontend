@@ -109,7 +109,7 @@ const Navbar = () => {
   const [focus, setFocus] = useState(false);
 
   const clickHandler = () => {
-    setFocus(true);
+    setFocus(!focus);
   };
   const scroll = Scroll.scroller;
   const scrollTo = () => {
@@ -119,11 +119,13 @@ const Navbar = () => {
     <div className={styles.container}>
       <div className={styles.toper}>
         <div className={styles.text}>
-          <h4 className={styles.h4}>
-            Plage
-            <br />
-            <span className={styles.matn}>meet the prefection</span>
-          </h4>
+          <span className={styles.box}>
+            <h4 className={styles.h4}>
+              Plage
+              <br />
+              <span className={styles.matn}>meet the prefection</span>
+            </h4>
+          </span>
         </div>
         <div className={styles.dive}>
           <Image className={styles.img} src={logo} width={60} height={60} />
@@ -131,7 +133,7 @@ const Navbar = () => {
       </div>
       <div className={styles.card}>
         <div className={styles.category}>
-          <p>دسته بندی ها</p>
+          <p onClick={clickHandler}>دسته بندی ها</p>
         </div>
         <div className={styles.flexed}>
           {data.map((item) => (

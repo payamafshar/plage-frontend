@@ -11,7 +11,6 @@ import SpringModal from "./Modalb";
 const Main = (props) => {
   const { title, text, price, image, src, id } = props.data;
   const [modal, setModal] = useState(false);
-  console.log(title);
   const clickHandler = () => {
     setModal(!modal);
   };

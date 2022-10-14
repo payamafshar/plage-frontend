@@ -11,8 +11,13 @@ import { useEffect, useState } from "react";
 import {
   americanStyle,
   cakeAndDesser,
+  mochtailAndJoice,
   pasta,
+  pishGhaza,
   pitza,
+  teaHot,
+  smooty,
+  smooti,
 } from "../functions/fetchAPI";
 import { Link } from "react-scroll";
 import svg from "../components/assets/love.svg";
@@ -22,7 +27,16 @@ import pizza from "../components/assets/peperoni.jpg";
 import * as Scroll from "react-scroll";
 import { scroller } from "react-scroll";
 import Example from "../components/Modalb";
-export default function Home({ pitza, cake, pasta, burger }) {
+export default function Home({
+  pitza,
+  cake,
+  pasta,
+  burger,
+  pGhaza,
+  tea,
+  mocktail,
+  smooty,
+}) {
   const [drawer, setDrawert] = useState(false);
 
   const clickHandler = () => {
@@ -137,9 +151,9 @@ export default function Home({ pitza, cake, pasta, burger }) {
           </div>
           <div className={styles.viper}>
             <div className={styles.diver}>
-              {/* {data.category.product.map((item) => (
+              {mocktail.category.product.map((item) => (
                 <Main key={item.id} data={item} />
-              ))} */}
+              ))}
             </div>
           </div>
         </div>
@@ -153,9 +167,9 @@ export default function Home({ pitza, cake, pasta, burger }) {
           </div>
           <div className={styles.viper}>
             <div className={styles.diver}>
-              {/* {data.category.product.map((item) => (
+              {smooty.category.product.map((item) => (
                 <Main key={item.id} data={item} />
-              ))} */}
+              ))}
             </div>
           </div>
         </div>
@@ -233,9 +247,9 @@ export default function Home({ pitza, cake, pasta, burger }) {
           </div>
           <div className={styles.viper}>
             <div className={styles.diver}>
-              {/* {data.category.product.map((item) => (
+              {pGhaza.category.product.map((item) => (
                 <Main key={item.id} data={item} />
-              ))} */}
+              ))}
             </div>
           </div>
         </div>
@@ -265,9 +279,9 @@ export default function Home({ pitza, cake, pasta, burger }) {
           </div>
           <div className={styles.viper}>
             <div className={styles.diver}>
-              {/* {data.category.product.map((item) => (
+              {tea.category.product.map((item) => (
                 <Main key={item.id} data={item} />
-              ))} */}
+              ))}
             </div>
           </div>
         </div>
@@ -317,11 +331,19 @@ export async function getServerSideProps() {
   // const cakeDesser = await cakeAndDesser();
   const pastaFood = await pasta();
   const burger = await americanStyle();
+  const pGhaza = await pishGhaza();
+  const tea = await teaHot();
+  const mocktail = await mochtailAndJoice();
+  const smooty = await smooti();
   return {
     props: {
       pitza: pitzaFood,
       pasta: pastaFood,
       burger,
+      pGhaza,
+      tea,
+      mocktail,
+      smooty,
       // cake: cakeDesser,
     },
   };

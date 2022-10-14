@@ -6,6 +6,14 @@
   position: fixed;
   top: 0;
 }
+.gridContainer {
+  background-color: #d1aa4b;
+  height: 548px;
+  width: 100%;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+}
 
 .toper {
   display: flex;
@@ -46,6 +54,12 @@
   grid-template-columns: repeat(15, 1fr);
   width: 100%;
   cursor: pointer;
+}
+.girded {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 14px;
+  margin-right: -29px;
 }
 
 .category {
