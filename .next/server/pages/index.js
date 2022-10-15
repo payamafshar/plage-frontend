@@ -446,6 +446,7 @@ const Card = (props)=>{
                 className: (Card_module_default()).pic,
                 children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
                     className: (Card_module_default()).shot,
+                    alt: "PLAGE",
                     src: image,
                     width: 70,
                     height: 70
@@ -456,6 +457,7 @@ const Card = (props)=>{
                 children: /*#__PURE__*/ jsx_runtime_.jsx("h5", {
                     className: (Card_module_default()).title,
                     children: /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                        className: (Card_module_default()).pe,
                         children: title
                     })
                 })
@@ -710,7 +712,8 @@ function Home({ pitza , cake , pasta , burger , pGhaza , tea , mocktail , smooty
                                     className: (Home_module_default()).plage,
                                     children: [
                                         /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
-                                            src: hogo
+                                            src: hogo,
+                                            alt: "PLAGE"
                                         }),
                                         /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
                                             className: (Home_module_default()).text,
@@ -1082,7 +1085,8 @@ function Home({ pitza , cake , pasta , burger , pGhaza , tea , mocktail , smooty
                             children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
                                 src: arrow,
                                 width: 60,
-                                height: 60
+                                height: 60,
+                                alt: "PLAGE"
                             })
                         })
                     }),
@@ -1102,7 +1106,8 @@ function Home({ pitza , cake , pasta , burger , pGhaza , tea , mocktail , smooty
                                             children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
                                                 src: love,
                                                 width: 50,
-                                                height: 50
+                                                height: 50,
+                                                alt: "PLAGE"
                                             })
                                         }),
                                         " "
