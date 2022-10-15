@@ -128,7 +128,13 @@ const Navbar = () => {
           </span>
         </div>
         <div className={styles.dive}>
-          <Image className={styles.img} src={logo} width={60} height={60} />
+          <Image
+            className={styles.img}
+            alt="plage"
+            src={logo}
+            width={60}
+            height={60}
+          />
         </div>
       </div>
       <div className={styles.card}>

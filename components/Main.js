@@ -31,7 +31,7 @@ const Main = (props) => {
           // }}
           unoptimized
           src={image}
-          alt="hello"
+          alt="plage"
           width={130}
           height={140}
         />
@@ -60,6 +60,7 @@ const Main = (props) => {
                   src={image}
                   width={500}
                   height={550}
+                  alt="plage"
                 />
               </Modal.Title>
             </Modal.Header>
