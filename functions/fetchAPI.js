@@ -85,10 +85,10 @@ export const pishGhaza = async () => {
   const data = response.json();
   return data;
 };
-// export const sobhane = async () => {
-//   const response = await fetch(
-//     "http://localhost:5000/category/63340be359f20747bf690815"
-//   );
-//   const data = response.json();
-//   return data;
-// };
+export const sobhane = async () => {
+  const response = await fetch(
+    "http://plage-menew.runflare.run/category/634aeec99856441a217ac5d0"
+  );
+  const data = response.json();
+  return data;
+};

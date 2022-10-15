@@ -18,11 +18,12 @@ import {
   teaHot,
   smooty,
   smooti,
+  sobhane,
 } from "../functions/fetchAPI";
 import { Link } from "react-scroll";
 import svg from "../components/assets/love.svg";
 import arrow from "../components/assets/arrow.svg";
-import plage from "../components/assets/1.jpg";
+import plage from "../components/assets/hogo.jpg";
 import pizza from "../components/assets/peperoni.jpg";
 import * as Scroll from "react-scroll";
 import { scroller } from "react-scroll";
@@ -36,6 +37,7 @@ export default function Home({
   tea,
   mocktail,
   smooty,
+  breakfast,
 }) {
   const [drawer, setDrawert] = useState(false);
 
@@ -71,7 +73,6 @@ export default function Home({
               <div className={styles.text}>
                 <span className={styles.majmooe}>مجموعه ی پلاژ</span>
                 <br />
-                ما در مجموعه ی پلاژ
               </div>
             </div>
           </div>
@@ -295,9 +296,9 @@ export default function Home({
           </div>
           <div className={styles.viper}>
             <div className={styles.diver}>
-              {/* {data.category.product.map((item) => (
+              {breakfast.category.product.map((item) => (
                 <Main key={item.id} data={item} />
-              ))} */}
+              ))}
             </div>
           </div>
         </div>
@@ -335,6 +336,7 @@ export async function getServerSideProps() {
   const tea = await teaHot();
   const mocktail = await mochtailAndJoice();
   const smooty = await smooti();
+  const breakfast = await sobhane();
   return {
     props: {
       pitza: pitzaFood,
@@ -344,6 +346,7 @@ export async function getServerSideProps() {
       tea,
       mocktail,
       smooty,
+      breakfast,
       // cake: cakeDesser,
     },
   };

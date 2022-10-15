@@ -1,6 +1,6 @@
 import styles from "../styles/Navbar.module.css";
 import Image from "next/image";
-import logo from "../components/assets/1.jpg";
+import logo from "../components/assets/logo.jpg";
 import tea from "../components/assets/tea.png";
 import pizza from "../components/assets/pizza.png";
 import pasta from "../components/assets/spaguetti.png";
