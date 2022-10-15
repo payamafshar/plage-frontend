@@ -32,11 +32,17 @@ const Card = (props) => {
   return (
     <div onClick={() => scrollTo(id)} className={styles.container}>
       <div className={styles.pic}>
-        <Image className={styles.shot} src={image} width={70} height={70} />
+        <Image
+          className={styles.shot}
+          alt="PLAGE"
+          src={image}
+          width={70}
+          height={70}
+        />
       </div>
       <div className={styles.trick}>
         <h5 className={styles.title}>
-          <span>{title}</span>
+          <span className={styles.pe}>{title}</span>
         </h5>
       </div>
     </div>

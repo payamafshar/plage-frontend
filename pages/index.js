@@ -69,7 +69,7 @@ export default function Home({
           </div>
           <div className={styles.viper}>
             <div className={styles.plage}>
-              <Image src={plage} />
+              <Image src={plage} alt="PLAGE" />
               <div className={styles.text}>
                 <span className={styles.majmooe}>مجموعه ی پلاژ</span>
                 <br />
@@ -304,7 +304,7 @@ export default function Home({
         </div>
         <div className={styles.svgUp} onClick={() => scrollTo(0)}>
           <div className={styles.svgUpp}>
-            <Image src={arrow} width={60} height={60} />
+            <Image src={arrow} width={60} height={60} alt="PLAGE" />
           </div>
         </div>
         <div className={styles.footer}>
@@ -312,7 +312,7 @@ export default function Home({
             <span>Made With </span>
             <div className={styles.fake}>
               <span className={styles.svg}>
-                <Image src={svg} width={50} height={50} />
+                <Image src={svg} width={50} height={50} alt="PLAGE" />
               </span>{" "}
             </div>
             <span>By</span>
